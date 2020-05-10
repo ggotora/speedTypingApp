@@ -2,7 +2,6 @@ const showQuotes = document.querySelector('.show-random-quotes');
 const userInput = document.querySelector('.userInput');
 const showAuthor = document.querySelector('.show-author');
 const showLength = document.querySelector('.show-length');
-const correctInput = document.querySelector('.correct-input')
 const timerSelector = document.querySelector('.timer');
 const results = document.querySelector('.results');
 
@@ -39,13 +38,13 @@ async function displayQuotes(){
 
 }
 
-let correct = 0;
+
 userInput.addEventListener('input', () =>{
     //put every letter into a span tag 
     const quotesSpans = showQuotes.querySelectorAll('span');
     //get user input values 
     const valueArray = userInput.value.split(''); 
-    
+
  //to handle next challenge
     let passed = true;
     quotesSpans.forEach((characterSpan, index) => {
@@ -57,8 +56,6 @@ userInput.addEventListener('input', () =>{
         }else if(character === characterSpan.innerText){
             characterSpan.classList.add('correct')
             characterSpan.classList.remove('incorrect')
-            correct += 1;
-            correctInput.textContent = correct;
             
         }else {
             characterSpan.classList.remove('correct')
@@ -70,7 +67,8 @@ userInput.addEventListener('input', () =>{
     userInput.innerText = null
     if(passed){
         clearInterval(intervalId)
-        results.textContent = `Congradulations. You typed ${showLength.textContent} letters in ${timerSelector.tex} seconds`
+        results.textContent = `Congradulations. You typed ${showLength.textContent} letters in ${timerSelector.innerText} seconds`
+      
     }
     
 })
@@ -88,11 +86,27 @@ timerBtnStart.addEventListener('click', () => {
 
 btnPause.addEventListener('click', ()=> {
     clearInterval(intervalId)
-    let total = btnPause.textContent
+    let total = timerSelector.textContent
 })
 
 next.addEventListener('click', () => {
+   
+    results.textContent = "";
+    userInput.value = "";
+    timer = 0;
+    timerSelector.textContent = ''
+
     displayQuotes()
+
 })
+
+function eventTimer(){
+
+    intervalId = setInterval(() => {
+        timer += 1;
+        timerSelector.textContent = timer;
+    }, 1000)
+}
+
 displayQuotes()
 

@@ -118,6 +118,15 @@ body .welcome-section .score-detail-area {
   position: relative;
 }
 
+body .welcome-section .score-detail-area .instruction {
+  color: orange;
+}
+
+body .welcome-section .score-detail-area .results {
+  color: lime;
+  font-weight: bold;
+}
+
 body .welcome-section .score-detail-area .btns {
   position: absolute;
   bottom: 10px;
@@ -139,6 +148,10 @@ body .welcome-section .score-detail-area .btns .btn {
   font-weight: bold;
   cursor: pointer;
   outline-color: black;
+}
+
+body .welcome-section .score-detail-area .btns .starter {
+  color: orange;
 }
 
 body .footer {
