@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 70vh 10%;
+      grid-template-rows: auto 70vh 10%;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  border: 0px solid transparent;
+  width: 100%;
+  background: #5758BB;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  max-height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
+  color: #ffffff;
+}
+
+body .header h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+body .header p {
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+body .header .me {
+  font-size: .9rem;
+  font-style: italic;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.685);
+  font-weight: bold;
+}
+
+body .welcome-section {
+  max-height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 2rem 3rem 2rem;
+      grid-template-areas: 'quotes quotes quotes' 'userTxt userTxt score';
+}
+
+body .welcome-section .show-random-quotes, body .welcome-section .input-area, body .welcome-section .score-detail-area {
+  padding: 1rem;
+  margin: 1rem;
+  background: #4B4B4B;
+  color: floralwhite;
+  font-size: 1.3rem;
+}
+
+body .welcome-section .show-random-quotes {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: quotes;
+}
+
+body .welcome-section .show-random-quotes .correct {
+  color: lime;
+}
+
+body .welcome-section .show-random-quotes .incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+body .welcome-section .input-area {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: userTxt;
+}
+
+body .welcome-section .input-area .userInput {
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  outline-color: lime;
+}
+
+body .welcome-section .score-detail-area {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: score;
+  position: relative;
+}
+
+body .welcome-section .score-detail-area .btns {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .welcome-section .score-detail-area .btns .btn {
+  background: none;
+  padding: .5rem 1rem;
+  margin: 0 .41rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  outline-color: black;
+}
+
+body .footer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #f4f4f4;
+  color: #747272;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .footer a {
+  text-decoration: none;
+  color: #747272;
+}
+
+body .footer a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+body .footer .social {
+  justify-self: flex-end;
+}
+
+body .footer .social a {
+  margin-left: 1.4rem;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 70vh 10%;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    border: 0px solid transparent;
+    width: 100%;
+    background: #5758BB; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header {
+        grid-row: 1/2;
+        max-height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        color: #ffffff;
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        p {
+            text-align: justify;
+            font-size: 1.3rem;
+        }
+        .me {
+            font-size: .9rem;
+            font-style: italic;
+            padding: 1rem;
+            color:rgba(255, 255, 255, 0.685);
+
+            font-weight: bold;
+
+        }
+    } 
+    .welcome-section {
+        max-height: 100%;
+        grid-row: 2/3;
+        display: grid;
+        margin: 0 2rem 3rem 2rem;     
+        grid-template-areas: 
+            'quotes quotes quotes'
+            'userTxt userTxt score'
+        ;
+
+        .show-random-quotes, .input-area, .score-detail-area {
+            padding: 1rem;
+            margin: 1rem;
+            background:#4B4B4B;
+            color: floralwhite;
+            font-size: 1.3rem;
+        }
+        .show-random-quotes {
+            grid-area: quotes;
+            .correct {
+                color: lime;
+            }
+            .incorrect {
+                color: red;
+                text-decoration: underline;
+            }
+
+        }
+        .input-area {
+            grid-area: userTxt;
+        
+            .userInput {
+                width: 100%;
+                height: 100%;
+                font-size: 1.3rem;
+                outline-color: lime;
+              
+            }
+        }
+        .score-detail-area {
+            grid-area: score;
+            position: relative;
+            .btns {
+                position: absolute;
+                
+                bottom: 10px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .btn {
+                    background: none;
+                    padding: .5rem 1rem;
+                    margin: 0 .41rem;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    outline-color: black;
+        
+                }
+            }
+        }
+    }
+    .footer {
+        grid-row: 3/4;
+        max-height: 100%;
+        display: flex;
+        width: 100%;
+        background: #f4f4f4;
+        color: rgb(116, 114, 114);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: rgb(116, 114, 114);
+            &:hover {
+                color: black;
+                font-weight: bold;
+            }
+        }
+        .social {
+            justify-self: flex-end;
+            a {
+                margin-left: 1.4rem;
+            }
+
+        }
+    }
+}
+
